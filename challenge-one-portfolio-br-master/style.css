@@ -2,129 +2,239 @@
 /*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
 coloque nas sessões indicadas*/
 
-:root{
+:root {
     /*Insira a variavel das outras cores inspecionando o modelo do figma*/
     /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
-   --cor-de-fundo: #F5F5F5;
-   --cor-de-link: #000;
+    --cor-de-fundo: #F5F5F5;
+    --cor-de-link: #000;
 }
 
 body {
     box-sizing: border-box;
-    background-color: var(--cor-de-fundo) ;
-    font-family: 'Raleway';
+    background-color: var(--cor-de-fundo);
+    font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1;
 }
-ol, ul,li {
+
+ol, ul, li {
     list-style: none;
 }
-a{
+
+a {
     text-decoration: none;
     color: var(--cor-de-link);
 }
 
-/*Neste desafio, gostariamos que praticassem a metodologia BEM, caso seintam a vontade 
-de utiliza-la. 
-
-Mas o que é o BEM?
-
+/*Neste desafio, gostariamos que praticassem a metodologia BEM, caso se sintam à vontade 
+de utilizá-la. 
+Mas o que é o BEM? 
 BEM (Block, Element, Modifier) ​​é uma abordagem baseada em componentes para o desenvolvimento
 web. A ideia por trás disso é dividir a interface do usuário em blocos independentes.
 Isso torna o desenvolvimento de interface fácil e rápido, mesmo com uma interface
 de usuário complexa, e permite a reutilização de código existente sem copiar e colar.
-
 Link da documentação oficial!
 https://en.bem.info/methodology/quick-start/*/
 
-/*Sessão Menu*/
-
-section.menu{
-
+/* Cabeçalho */
+header {
+    background-color: #282c34;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
 }
 
-/*Sessão Title*/
-
-section.title{
-
+header h1 {
+    margin: 0;
 }
 
-/*Sessão About*/
-
-section.about{
-
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
 }
 
-/*Sessão Hobbies*/
-
-section.hobbies{
-    
+/* Seções */
+section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Experiência Acadêmica*/
-
-section.academic{
-
+.bio {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-/* experiência*/
-
-section.experience{
-
+.bio p {
+    max-width: 800px;
+    margin: 20px auto;
+    font-size: 18px;
 }
 
-/*Contato*/
-
-section.formcontato{
-
+/* Skills */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
 }
 
-/*footeer*/
+.skills img {
+    width: 60px;
+    height: 60px;
+}
 
-section.footer{
-   
+/* Projetos */
+.projects {
+    margin-top: 50px;
+}
+
+.projects h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.project-card a {
+    text-decoration: none;
+    color: #007ACC;
+}
+
+/* Contato */
+.contact {
+    background-color: #282c34;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact p {
+    margin: 10px 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links a {
+    text-decoration: none;
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Sessão Menu */
+section.menu {
+    /* Adicione estilos para o menu, se necessário */
+}
+
+/* Sessão Title */
+section.title {
+    /* Adicione estilos para o título, se necessário */
+}
+
+/* Sessão About */
+section.about {
+    /* Adicione estilos para a seção "sobre", se necessário */
+}
+
+/* Sessão Hobbies */
+section.hobbies {
+    /* Adicione estilos para hobbies, se necessário */
+}
+
+/* Experiência Acadêmica */
+section.academic {
+    /* Adicione estilos para a experiência acadêmica, se necessário */
+}
+
+/* Experiência */
+section.experience {
+    /* Adicione estilos para a experiência, se necessário */
+}
+
+/* Contato */
+section.formcontato {
+    /* Adicione estilos para o formulário de contato, se necessário */
+}
+
+/* Footer */
+section.footer {
+    /* Adicione estilos para o rodapé, se necessário */
 }
 
 /* Chegou a hora de se desafiar com a responsividade, 
 utilize como referência os breakpoints @media abaixo*/
 
-/*Tablet*/
+/* Tablet */
 @media (min-width: 768px) {
+    /* Menu */
+    /* Adicione estilos responsivos para o menu em telas de tablet */
 
-/* Menu */
+    /* Title */
+    /* Adicione estilos responsivos para o título em telas de tablet */
 
-/*title*/
+    /* Skills */
+    /* Adicione estilos responsivos para skills em telas de tablet */
 
-/*Skills*/
+    /* Hobbies */
+    /* Adicione estilos responsivos para hobbies em telas de tablet */
 
-/*Hobbies*/
+    /* Experiência Acadêmica */
+    /* Adicione estilos responsivos para a experiência acadêmica em telas de tablet */
 
-/*Experiências acadêmicas*/
-
-/*Expeirência profissional*/
-
+    /* Experiência Profissional */
+    /* Adicione estilos responsivos para a experiência profissional em telas de tablet */
 }
 
-/*Mobile*/
+/* Mobile */
 @media (min-width: 425px) {
+    /* Menu */
+    /* Adicione estilos responsivos para o menu em telas de dispositivos móveis */
 
-/*Menu*/
+    /* Título */
+    /* Adicione estilos responsivos para o título em telas de dispositivos móveis */
 
-/*Titulo*/
+    /* Sessão sobre */
+    /* Adicione estilos responsivos para a seção sobre em telas de dispositivos móveis */
 
-/*Sessão sobre*/
+    /* Skills */
+    /* Adicione estilos responsivos para skills em telas de dispositivos móveis */
 
-/*Skills*/
+    /* Hobbies */
+    /* Adicione estilos responsivos para hobbies em telas de dispositivos móveis */
 
-/*Hobbies*/
- 
-/*Formação Acadêmica*/
+    /* Formação Acadêmica */
+    /* Adicione estilos responsivos para a formação acadêmica em telas de dispositivos móveis */
 
-/*Experiência Profissional*/
+    /* Experiência Profissional */
+    /* Adicione estilos responsivos para a experiência profissional em telas de dispositivos móveis */
 
- /*Contato*/
+    /* Contato */
+    /* Adicione estilos responsivos para o contato em telas de dispositivos móveis */
 
-/*Footer*/
-
+    /* Footer */
+    /* Adicione estilos responsivos para o rodapé em telas de dispositivos móveis */
 }

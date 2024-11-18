@@ -168,13 +168,3 @@ Aqui estão minhas certificações que comprovam minhas habilidades e conhecimen
 ---
 
 **🔗 [Voltar ao Topo](#📜-certificações)**
-
-Certificações em Fundamentos de Desenvolvimento
-Certificações que cobrem tópicos como versionamento de código, fluxogramas e conceitos básicos de programação:
-
-Certificação	Data de Conclusão
-Versionamento de Código com Git e GitHub	09/10/2024
-Entendendo Algoritmos e Fluxogramas	14/10/2024
-Introdução aos Conceitos Básicos em Lógica de Programação	13/10/2024
-Como acessar os certificados?
-Cada certificado está armazenado no formato PDF e pode ser acessado clicando diretamente no link. Para visualização, os arquivos estão disponíveis neste repositório na pasta /certificates.

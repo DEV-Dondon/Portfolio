@@ -3,7 +3,7 @@
 coloque nas sessões indicadas*/
 
 :root {
-    /*Insira a variavel das outras cores inspecionando o modelo do figma*/
+    /*Insira a variável das outras cores inspecionando o modelo do Figma*/
     /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
     --cor-de-fundo: #F5F5F5;
     --cor-de-link: #000;
@@ -26,16 +26,6 @@ a {
     text-decoration: none;
     color: var(--cor-de-link);
 }
-
-/*Neste desafio, gostariamos que praticassem a metodologia BEM, caso se sintam à vontade 
-de utilizá-la. 
-Mas o que é o BEM? 
-BEM (Block, Element, Modifier) ​​é uma abordagem baseada em componentes para o desenvolvimento
-web. A ideia por trás disso é dividir a interface do usuário em blocos independentes.
-Isso torna o desenvolvimento de interface fácil e rápido, mesmo com uma interface
-de usuário complexa, e permite a reutilização de código existente sem copiar e colar.
-Link da documentação oficial!
-https://en.bem.info/methodology/quick-start/*/
 
 /* Cabeçalho */
 header {
@@ -145,96 +135,13 @@ section {
     height: 40px;
 }
 
-/* Sessão Menu */
-section.menu {
-    /* Adicione estilos para o menu, se necessário */
-}
+/* Sessões adicionais: Estilize se necessário no futuro */
 
-/* Sessão Title */
-section.title {
-    /* Adicione estilos para o título, se necessário */
-}
-
-/* Sessão About */
-section.about {
-    /* Adicione estilos para a seção "sobre", se necessário */
-}
-
-/* Sessão Hobbies */
-section.hobbies {
-    /* Adicione estilos para hobbies, se necessário */
-}
-
-/* Experiência Acadêmica */
-section.academic {
-    /* Adicione estilos para a experiência acadêmica, se necessário */
-}
-
-/* Experiência */
-section.experience {
-    /* Adicione estilos para a experiência, se necessário */
-}
-
-/* Contato */
-section.formcontato {
-    /* Adicione estilos para o formulário de contato, se necessário */
-}
-
-/* Footer */
-section.footer {
-    /* Adicione estilos para o rodapé, se necessário */
-}
-
-/* Chegou a hora de se desafiar com a responsividade, 
-utilize como referência os breakpoints @media abaixo*/
-
-/* Tablet */
+/* Responsividade */
 @media (min-width: 768px) {
-    /* Menu */
-    /* Adicione estilos responsivos para o menu em telas de tablet */
-
-    /* Title */
-    /* Adicione estilos responsivos para o título em telas de tablet */
-
-    /* Skills */
-    /* Adicione estilos responsivos para skills em telas de tablet */
-
-    /* Hobbies */
-    /* Adicione estilos responsivos para hobbies em telas de tablet */
-
-    /* Experiência Acadêmica */
-    /* Adicione estilos responsivos para a experiência acadêmica em telas de tablet */
-
-    /* Experiência Profissional */
-    /* Adicione estilos responsivos para a experiência profissional em telas de tablet */
+    /* Adicione estilos para tablet */
 }
 
-/* Mobile */
 @media (min-width: 425px) {
-    /* Menu */
-    /* Adicione estilos responsivos para o menu em telas de dispositivos móveis */
-
-    /* Título */
-    /* Adicione estilos responsivos para o título em telas de dispositivos móveis */
-
-    /* Sessão sobre */
-    /* Adicione estilos responsivos para a seção sobre em telas de dispositivos móveis */
-
-    /* Skills */
-    /* Adicione estilos responsivos para skills em telas de dispositivos móveis */
-
-    /* Hobbies */
-    /* Adicione estilos responsivos para hobbies em telas de dispositivos móveis */
-
-    /* Formação Acadêmica */
-    /* Adicione estilos responsivos para a formação acadêmica em telas de dispositivos móveis */
-
-    /* Experiência Profissional */
-    /* Adicione estilos responsivos para a experiência profissional em telas de dispositivos móveis */
-
-    /* Contato */
-    /* Adicione estilos responsivos para o contato em telas de dispositivos móveis */
-
-    /* Footer */
-    /* Adicione estilos responsivos para o rodapé em telas de dispositivos móveis */
+    /* Adicione estilos para dispositivos móveis */
 }

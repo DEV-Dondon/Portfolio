@@ -81,11 +81,21 @@ header p {
     margin-top: 20px;
 }
 
-.skills {
+/* Seções alinhadas ao centro */
+.skills, 
+.projects {
     text-align: center;
     padding: 40px 20px;
 }
 
+.skills h2, 
+.projects h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: var(--cor-primaria);
+}
+
+/* Skills: centralização dos ícones */
 .skills-container {
     display: flex;
     flex-wrap: wrap;
@@ -93,22 +103,12 @@ header p {
     gap: 20px;
 }
 
-.projects {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.projects h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: var(--cor-primaria);
-}
-
-.container {
+/* Projetos: centralização dos cards */
+.projects .container {
     display: flex;
-    justify-content: center;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 .project-card {
@@ -118,24 +118,18 @@ header p {
     width: 300px;
     padding: 20px;
     text-align: center;
+    transition: transform 0.3s ease;
 }
 
-.project-card h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
+.project-card:hover {
+    transform: scale(1.05);
 }
 
-.project-card p {
-    font-size: 16px;
-    margin-bottom: 20px;
-    line-height: 1.5;
-}
-
-.project-card a {
-    text-decoration: none;
-    color: var(--cor-link);
-    font-size: 16px;
-    font-weight: bold;
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
 }
 
 footer {

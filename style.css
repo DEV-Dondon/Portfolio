@@ -19,34 +19,43 @@ body {
 header {
     background-color: var(--cor-header);
     color: #fff;
-    text-align: center;
-    padding: 40px 20px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
 }
 
-.menu {
-    position: absolute;
-    top: 10px;
-    right: 20px;
+.menu nav {
+    display: flex;
+    gap: 20px;
 }
 
 .menu a {
     color: #fff;
-    margin: 0 10px;
     text-decoration: none;
     font-size: 14px;
+    font-weight: bold;
 }
 
 .header-container {
-    max-width: 800px;
-    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.header-text {
+    max-width: 60%;
 }
 
 header .profile-photo {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    margin-bottom: 15px;
+    border: 2px solid var(--cor-secao);
+    object-fit: cover;
 }
 
 header h1 {
@@ -61,7 +70,6 @@ header p {
 
 .social-links {
     display: flex;
-    justify-content: center;
     gap: 15px;
 }
 
@@ -69,6 +77,7 @@ header p {
     color: var(--cor-link);
     font-size: 14px;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .bio, .skills, .projects {
@@ -112,16 +121,70 @@ footer {
     color: #fff;
     padding: 20px 0;
 }
-.project-card img {
-    width: 100%;
-    height: auto;
-    max-height: 200px; /* Limita a altura da imagem */
-    object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
-}
+
 .projects .container {
     display: flex;
-    flex-direction: column; /* Alinha elementos em coluna */
-    justify-content: center; /* Centraliza verticalmente */
-    align-items: center; /* Centraliza horizontalmente */
-    min-height: 60vh; /* Define um tamanho mínimo para ocupar espaço */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+}
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-photo {
+        margin: 20px 0;
+        width: 100px;
+        height: 100px;
+    }
+
+    .menu nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project-card {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu nav {
+        font-size: 12px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+}
+
+/* Melhorias Gerais */
+header {
+    flex-wrap: wrap;
+}
+
+.skills-container img {
+    transition: transform 0.3s ease;
+}
+
+.skills-container img:hover {
+    transform: scale(1.1);
+}
+
+.project-card a {
+    color: var(--cor-link);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
 }

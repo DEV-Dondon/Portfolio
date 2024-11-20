@@ -1,9 +1,11 @@
 :root {
     --cor-de-fundo: #F5F5F5;
     --cor-texto: #333;
-    --cor-primaria: #282c34;
+    --cor-primaria: #007ACC;
+    --cor-header: #282c34;
     --cor-link: #007ACC;
     --cor-secao: #f0f4fc;
+    --cor-card: #fff;
 }
 
 body {
@@ -15,10 +17,24 @@ body {
 }
 
 header {
-    text-align: center;
-    background-color: var(--cor-primaria);
+    background-color: var(--cor-header);
     color: #fff;
+    text-align: center;
     padding: 40px 20px;
+    position: relative;
+}
+
+.menu {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.menu a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 14px;
 }
 
 .header-container {
@@ -27,97 +43,62 @@ header {
 }
 
 header .profile-photo {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 header h1 {
-    font-size: 28px;
+    font-size: 32px;
     margin-bottom: 10px;
 }
 
 header p {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 20px;
 }
 
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 .social-links a {
     color: var(--cor-link);
-    font-size: 16px;
+    font-size: 14px;
     text-decoration: none;
 }
 
-.bio {
+.bio, .skills, .projects {
     text-align: center;
+    padding: 40px 20px;
     background-color: var(--cor-secao);
-    padding: 40px 20px;
-}
-
-.bio h2 {
-    font-size: 28px;
     margin-bottom: 20px;
-    color: var(--cor-primaria);
 }
 
-.bio p {
-    max-width: 700px;
-    margin: 0 auto;
-    font-size: 18px;
-    line-height: 1.8;
-}
-
-.signature {
-    font-family: 'Brush Script MT', cursive;
-    font-size: 24px;
-    color: var(--cor-primaria);
-    margin-top: 20px;
-}
-
-/* Seções alinhadas ao centro */
-.skills, 
-.projects {
-    text-align: center;
-    padding: 40px 20px;
-}
-
-.skills h2, 
-.projects h2 {
+.bio h2, .skills h2, .projects h2 {
     font-size: 28px;
-    margin-bottom: 20px;
     color: var(--cor-primaria);
+    margin-bottom: 20px;
 }
 
-/* Skills: centralização dos ícones */
 .skills-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-}
-
-/* Projetos: centralização dos cards */
-.projects .container {
-    display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
 }
 
 .project-card {
-    background-color: #fff;
+    background-color: var(--cor-card);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 300px;
     padding: 20px;
     text-align: center;
+    margin: 10px;
     transition: transform 0.3s ease;
 }
 
@@ -125,16 +106,22 @@ header p {
     transform: scale(1.05);
 }
 
+footer {
+    text-align: center;
+    background-color: var(--cor-header);
+    color: #fff;
+    padding: 20px 0;
+}
 .project-card img {
     width: 100%;
     height: auto;
-    border-radius: 5px;
-    margin-bottom: 15px;
+    max-height: 200px; /* Limita a altura da imagem */
+    object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
 }
-
-footer {
-    text-align: center;
-    background-color: var(--cor-primaria);
-    color: #fff;
-    padding: 20px 0;
+.projects .container {
+    display: flex;
+    flex-direction: column; /* Alinha elementos em coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    min-height: 60vh; /* Define um tamanho mínimo para ocupar espaço */
 }

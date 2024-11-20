@@ -197,3 +197,90 @@ footer {
         font-size: 14px;
     }
 }
+
+/* Header e layout */
+header {
+    background-color: #282c34;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    /* Para garantir que o conteúdo não ultrapasse os limites da tela */
+}
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #f0f4fc;
+}
+
+.header-text {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-text h1 {
+    font-size: 32px;
+    margin: 0;
+}
+
+.header-text p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #007ACC;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-photo {
+        margin: 20px 0;
+        width: 100px;
+        height: 100px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-text h1 {
+        font-size: 24px;
+    }
+
+    .header-text p {
+        font-size: 14px;
+    }
+
+    .social-links a {
+        font-size: 12px;
+    }
+}

@@ -80,14 +80,18 @@ header p {
     font-weight: bold;
 }
 
-.bio, .skills, .projects {
+.bio,
+.skills,
+.projects {
     text-align: center;
     padding: 40px 20px;
     background-color: var(--cor-secao);
     margin-bottom: 20px;
 }
 
-.bio h2, .skills h2, .projects h2 {
+.bio h2,
+.skills h2,
+.projects h2 {
     font-size: 28px;
     color: var(--cor-primaria);
     margin-bottom: 20px;
@@ -129,6 +133,7 @@ footer {
     align-items: center;
     min-height: 60vh;
 }
+
 /* Responsividade */
 @media (max-width: 768px) {
     .header-container {
@@ -187,4 +192,13 @@ header {
 
 .project-card a:hover {
     text-decoration: underline;
+}
+
+.bio {
+    background-color: #f0f8ff;
+    /* Substitua pela cor desejada */
+}
+
+.bio {
+    background-image: linear-gradient(to right, #f0f8ff, #e0f2f1);
 }

@@ -19,23 +19,23 @@ body {
 header {
     background-color: var(--cor-header);
     color: #fff;
-    padding: 20px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 40px 20px;
+    text-align: center;
     position: relative;
+    flex-wrap: wrap;
 }
 
-.menu nav {
-    display: flex;
-    gap: 20px;
+.menu {
+    position: absolute;
+    top: 10px;
+    right: 20px;
 }
 
 .menu a {
     color: #fff;
+    margin: 0 10px;
     text-decoration: none;
     font-size: 14px;
-    font-weight: bold;
 }
 
 .header-container {
@@ -44,18 +44,17 @@ header {
     justify-content: space-between;
     gap: 20px;
     width: 100%;
-}
-
-.header-text {
-    max-width: 60%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 header .profile-photo {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    border: 2px solid var(--cor-secao);
+    margin-bottom: 15px;
     object-fit: cover;
+    border: 2px solid var(--cor-secao);
 }
 
 header h1 {
@@ -70,6 +69,7 @@ header p {
 
 .social-links {
     display: flex;
+    justify-content: center;
     gap: 15px;
 }
 
@@ -77,7 +77,6 @@ header p {
     color: var(--cor-link);
     font-size: 14px;
     text-decoration: none;
-    font-weight: bold;
 }
 
 .bio,
@@ -89,6 +88,10 @@ header p {
     margin-bottom: 20px;
 }
 
+.bio {
+    background-image: linear-gradient(to right, #f0f8ff, #e0f2f1);
+}
+
 .bio h2,
 .skills h2,
 .projects h2 {
@@ -97,9 +100,11 @@ header p {
     margin-bottom: 20px;
 }
 
-.skills-container {
+.skills-container,
+.projects .container {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 20px;
     flex-wrap: wrap;
 }
@@ -126,12 +131,34 @@ footer {
     padding: 20px 0;
 }
 
+.project-card img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+}
+
 .projects .container {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     min-height: 60vh;
+}
+
+.skills-container img {
+    transition: transform 0.3s ease;
+}
+
+.skills-container img:hover {
+    transform: scale(1.1);
+}
+
+.project-card a {
+    color: var(--cor-link);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
 }
 
 /* Responsividade */
@@ -169,36 +196,4 @@ footer {
     header p {
         font-size: 14px;
     }
-}
-
-/* Melhorias Gerais */
-header {
-    flex-wrap: wrap;
-}
-
-.skills-container img {
-    transition: transform 0.3s ease;
-}
-
-.skills-container img:hover {
-    transform: scale(1.1);
-}
-
-.project-card a {
-    color: var(--cor-link);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.project-card a:hover {
-    text-decoration: underline;
-}
-
-.bio {
-    background-color: #f0f8ff;
-    /* Substitua pela cor desejada */
-}
-
-.bio {
-    background-image: linear-gradient(to right, #f0f8ff, #e0f2f1);
 }

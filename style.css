@@ -29,36 +29,26 @@ header {
 
 .header-container {
     display: flex;
-    /* Ativa o Flexbox */
     justify-content: flex-start;
-    /* Posiciona os elementos no início */
     align-items: center;
-    /* Alinha verticalmente no centro */
     gap: 20px;
-    /* Espaço entre a imagem e o texto */
     max-width: 1200px;
     margin-left: 10%;
-    /* Centraliza horizontalmente o container */
     width: 100%;
 }
 
 .header-text {
     flex: 2;
-    /* Faz o texto ocupar o espaço restante */
-    text-align: left
-    /* Centraliza o texto no espaço do header-text */
+    text-align: left;
 }
 
 .profile-photo {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    /* Torna a borda arredondada */
     object-fit: cover;
-    /* Mantém o aspecto da imagem */
-    border: 2px solid #f0f4fc;
+    border: 2px solid var(--cor-secao);
     margin: 0;
-    /* Remove margens indesejadas */
 }
 
 .menu {
@@ -146,6 +136,7 @@ footer {
     background-color: var(--cor-header);
     color: #fff;
     padding: 20px 0;
+    font-size: 14px;
 }
 
 .project-card img {
@@ -156,7 +147,8 @@ footer {
 }
 
 .projects .container {
-    flex-direction: column;
+    flex-direction: row;
+    /* Garante alinhamento horizontal */
     min-height: 60vh;
 }
 
@@ -178,11 +170,10 @@ footer {
     text-decoration: underline;
 }
 
-/* Responsividade */
+/* Ajustes para responsividade */
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column;
-        /* Elementos empilham verticalmente */
         text-align: center;
     }
 
@@ -222,4 +213,10 @@ footer {
     .social-links a {
         font-size: 12px;
     }
+}
+
+/* Ajuste para texto no footer */
+footer p {
+    margin: 0;
+    line-height: 1.5;
 }

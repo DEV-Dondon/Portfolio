@@ -90,7 +90,6 @@ header p {
 .skills,
 .projects {
     text-align: center;
-    padding: 40px 20px;
     background-color: var(--cor-secao);
     margin-bottom: 20px;
 }
@@ -121,10 +120,15 @@ header p {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 300px;
+    height: 350px;
+    /* Ajuste a altura para um tamanho fixo */
     padding: 20px;
     text-align: center;
     margin: 10px;
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .project-card:hover {
@@ -142,7 +146,8 @@ footer {
 .project-card img {
     width: 100%;
     height: auto;
-    max-height: 200px;
+    max-height: 150px;
+    /* Limita a altura das imagens */
     object-fit: contain;
 }
 
@@ -250,7 +255,7 @@ footer p {
     /* Bordas arredondadas */
     width: 150px;
     /* Largura dos ícones */
-    
+
     /* Altura do ícone */
     display: flex;
     /* Flexbox para centralizar a imagem */
@@ -273,4 +278,15 @@ footer p {
     /* Sombra mais forte ao passar o mouse */
     transform: scale(1.05);
     /* Leve zoom ao passar o mouse */
+}
+
+.project-card h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.project-card p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    flex-grow: 1;
 }

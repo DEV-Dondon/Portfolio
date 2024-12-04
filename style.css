@@ -220,3 +220,57 @@ footer p {
     margin: 0;
     line-height: 1.5;
 }
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que os itens se ajustem à largura */
+    gap: 20px;
+    /* Espaço entre os ícones */
+    justify-content: center;
+    /* Centraliza os ícones */
+    padding: 20px;
+    /* Fundo para destacar os ícones */
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite quebra de linha nos ícones */
+    gap: 20px;
+    justify-content: center;
+}
+
+.skill-icon {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    /* Sombra individual para cada ícone */
+    padding: 10px;
+    /* Fundo branco para destacar o ícone */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    width: 150px;
+    /* Largura dos ícones */
+    
+    /* Altura do ícone */
+    display: flex;
+    /* Flexbox para centralizar a imagem */
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    /* Tamanho do ícone */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    /* Efeitos suaves */
+}
+
+.skill-icon img {
+    max-width: 100%;
+    height: auto;
+    /* Faz com que a imagem não distorça */
+}
+
+.skill-icon:hover {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    /* Sombra mais forte ao passar o mouse */
+    transform: scale(1.05);
+    /* Leve zoom ao passar o mouse */
+}

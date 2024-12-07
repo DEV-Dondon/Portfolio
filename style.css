@@ -1,12 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
+
 :root {
-    --cor-de-fundo: #F5F5F5;
-    --cor-texto: #333;
-    --cor-primaria: #007ACC;
-    --cor-header: #282c34;
-    --cor-link: #007ACC;
-    --cor-secao: #f0f4fc;
-    --cor-card: #fff;
+    --cor-de-fundo: #F4F7FC;
+    --cor-texto: #2F2F2F;
+    --cor-primaria: #0066CC;
+    --cor-header: #1D1F28;
+    --cor-link: #0066CC;
+    --cor-secao: #F0F4FF;
+    --cor-card: #FFFFFF;
+    --cor-hover: #005BB5;
+    --cor-foco: #FFD700;
+    --cor-footer: #1D1F28;
+    --cor-sombra: rgba(0, 0, 0, 0.1);
+    --font-padrao: arial, verdana, helvetica, sans-serif;
 }
+
 
 body {
     font-family: 'Raleway', sans-serif;
@@ -289,4 +297,51 @@ footer p {
     font-size: 14px;
     margin-bottom: 20px;
     flex-grow: 1;
+}
+
+/* Espaçamento adicional */
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    /* Melhor legibilidade */
+}
+
+.header-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    padding: 0 20px;
+    /* Ajuste para evitar o uso de margem diretamente */
+    width: 100%;
+}
+
+/* Hover mais suave nos ícones */
+.skill-icon:hover {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.1);
+    /* Aumentando o efeito de zoom */
+    background-color: #f0f8ff;
+    /* Adicionando cor de fundo no hover */
+}
+
+/* Ajustes para as imagens de projeto */
+.project-card img {
+    width: 100%;
+    height: auto;
+    max-height: 160px;
+    /* Ajustando a altura das imagens para uma melhor consistência */
+    object-fit: contain;
+}
+
+/* Adicionando focus para acessibilidade */
+a:focus,
+.menu a:focus,
+.project-card a:focus {
+    outline: 3px solid var(--cor-foco);
 }

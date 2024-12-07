@@ -15,13 +15,14 @@
     --font-padrao: arial, verdana, helvetica, sans-serif;
 }
 
-
 body {
     font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
     background-color: var(--cor-de-fundo);
     color: var(--cor-texto);
+    line-height: 1.6;
+    /* Melhor legibilidade */
 }
 
 header {
@@ -234,58 +235,42 @@ footer p {
     line-height: 1.5;
 }
 
+/* Estilos para os ícones de habilidade */
 .skills-container {
     display: flex;
     flex-wrap: wrap;
-    /* Permite que os itens se ajustem à largura */
     gap: 20px;
-    /* Espaço entre os ícones */
     justify-content: center;
-    /* Centraliza os ícones */
     padding: 20px;
-    /* Fundo para destacar os ícones */
 }
 
 .skills {
     display: flex;
     flex-wrap: wrap;
-    /* Permite quebra de linha nos ícones */
     gap: 20px;
     justify-content: center;
 }
 
 .skill-icon {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    /* Sombra individual para cada ícone */
     padding: 10px;
-    /* Fundo branco para destacar o ícone */
     border-radius: 10px;
-    /* Bordas arredondadas */
     width: 150px;
-    /* Largura dos ícones */
-
-    /* Altura do ícone */
     display: flex;
-    /* Flexbox para centralizar a imagem */
     justify-content: center;
     align-items: center;
     font-size: 16px;
-    /* Tamanho do ícone */
     transition: box-shadow 0.3s ease, transform 0.3s ease;
-    /* Efeitos suaves */
 }
 
 .skill-icon img {
     max-width: 100%;
     height: auto;
-    /* Faz com que a imagem não distorça */
 }
 
 .skill-icon:hover {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-    /* Sombra mais forte ao passar o mouse */
     transform: scale(1.05);
-    /* Leve zoom ao passar o mouse */
 }
 
 .project-card h3 {
@@ -299,49 +284,51 @@ footer p {
     flex-grow: 1;
 }
 
-/* Espaçamento adicional */
-body {
-    font-family: 'Raleway', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--cor-de-fundo);
-    color: var(--cor-texto);
-    line-height: 1.6;
-    /* Melhor legibilidade */
+/* Ajuste para navbar mais fina */
+.menu nav {
+    padding: 5px 0;
 }
 
-.header-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 20px;
-    max-width: 1200px;
-    padding: 0 20px;
-    /* Ajuste para evitar o uso de margem diretamente */
-    width: 100%;
+.menu nav a {
+    font-size: 16px;
+    padding: 8px 15px;
+    text-transform: uppercase;
 }
 
-/* Hover mais suave nos ícones */
-.skill-icon:hover {
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-    transform: scale(1.1);
-    /* Aumentando o efeito de zoom */
-    background-color: #f0f8ff;
-    /* Adicionando cor de fundo no hover */
+.menu nav a:hover {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
 }
 
-/* Ajustes para as imagens de projeto */
-.project-card img {
-    width: 100%;
-    height: auto;
-    max-height: 160px;
-    /* Ajustando a altura das imagens para uma melhor consistência */
-    object-fit: contain;
-}
-
-/* Adicionando focus para acessibilidade */
+/* Foco para acessibilidade */
 a:focus,
 .menu a:focus,
 .project-card a:focus {
     outline: 3px solid var(--cor-foco);
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--cor-primaria);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    display: none;
+    transition: opacity 0.3s;
+}
+
+.back-to-top:hover {
+    background-color: var(--cor-foco);
+}
+body {
+    padding-top: 20px; /* Ajuste conforme necessário, dependendo da altura da navbar */
+}
+.navbar-custom {
+    background-color: #1D1F28 !important;
 }

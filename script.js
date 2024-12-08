@@ -2,7 +2,6 @@
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
-
     document.querySelector(this.getAttribute('href')).scrollIntoView({
       behavior: 'smooth',
       block: 'start'
@@ -15,10 +14,12 @@ const navLinks = document.querySelectorAll('.menu a');
 navLinks.forEach(link => {
   link.addEventListener('mouseenter', () => {
     link.style.color = "#FFD700"; // Cor de hover
-    link.style.transition = "color 0.3s ease-in-out"; // Efeito suave de transição
+    link.style.textShadow = '0 0 10px rgba(255, 215, 0, 0.8)'; // Sombra suave
+    link.style.transition = "color 0.3s ease-in-out, text-shadow 0.3s ease-in-out"; // Efeito suave de transição
   });
   link.addEventListener('mouseleave', () => {
     link.style.color = "#fff"; // Cor normal
+    link.style.textShadow = 'none'; // Remove a sombra
   });
 });
 
@@ -49,9 +50,9 @@ backToTopButton.style.cursor = 'pointer';
 backToTopButton.style.transition = 'background-color 0.3s ease-in-out';
 
 backToTopButton.addEventListener('click', scrollToTop);
-
 document.body.appendChild(backToTopButton);
 
+// Exibe o botão de "Voltar ao topo" quando rolar a página
 window.addEventListener('scroll', () => {
   if (window.scrollY > 300) {
     backToTopButton.style.display = 'block';
@@ -64,7 +65,6 @@ window.addEventListener('scroll', () => {
 backToTopButton.addEventListener('mouseenter', () => {
   backToTopButton.style.backgroundColor = '#ffcc00'; // Cor ao passar o mouse
 });
-
 backToTopButton.addEventListener('mouseleave', () => {
   backToTopButton.style.backgroundColor = '#FFD700'; // Cor original
 });
@@ -79,6 +79,7 @@ progressBar.style.height = '5px';
 progressBar.style.backgroundColor = '#FFD700';
 progressBar.style.zIndex = '9999';
 progressBar.style.width = '0%';
+progressBar.style.transition = 'width 0.3s ease-in-out'; // Adiciona uma transição suave
 document.body.appendChild(progressBar);
 
 window.addEventListener('scroll', () => {
@@ -86,4 +87,17 @@ window.addEventListener('scroll', () => {
   let documentHeight = document.documentElement.scrollHeight - window.innerHeight;
   let scrollPercentage = (scrollPosition / documentHeight) * 100;
   progressBar.style.width = scrollPercentage + '%';
+});
+
+// Efeito de slide para a barra de navegação (ocultar ao rolar para baixo, mostrar ao rolar para cima)
+let lastScrollTop = 0;
+const navbar = document.querySelector('.navbar'); // Seletor da sua barra de navegação
+window.addEventListener('scroll', () => {
+  let scrollTop = window.scrollY;
+  if (scrollTop > lastScrollTop) {
+    navbar.style.transform = 'translateY(-100%)'; // Esconde a barra ao rolar para baixo
+  } else {
+    navbar.style.transform = 'translateY(0)'; // Exibe a barra ao rolar para cima
+  }
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Impede que o valor seja negativo
 });

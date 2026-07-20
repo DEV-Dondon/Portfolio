@@ -156,7 +156,7 @@
                     <h3>Harry Potter Project</h3>
                     <p>Página interativa inspirada no universo de Harry Potter, desenvolvida com HTML, CSS e JavaScript.
                     </p>
-                    <a href="https://harrypotter-xi.vercel.app/" target="_blank">Ver Projeto</a>
+                    <a href="https://harrypotter-xi.vercel.app/" target="_blank" class="btn-project">Ver Projeto</a>
                 </div>
 
                 <!-- Projeto Instalike -->
@@ -167,11 +167,54 @@
                     <p>API Back-end desenvolvida para simular funcionalidades de uma rede social, usando boas práticas
                         de desenvolvimento.</p>
                     <a href="https://projeto-alura-instalike-back-7z0dpx314-dev-dondons-projects.vercel.app/"
-                        target="_blank">Ver
-                        Projeto</a>
+                        target="_blank" class="btn-project">Ver Projeto</a>
                 </div>
             </div>
+        </section>
 
+        <!-- Seção de Contato com Formulário e ViaCEP -->
+        <section id="contact-section" class="contact-section">
+            <h2>Entre em Contato</h2>
+            <div class="contact-container">
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cep">CEP:</label>
+                        <input type="text" id="cep" name="cep" placeholder="00000-000" maxlength="9">
+                        <button type="button" id="buscarCep" class="btn-cep">Buscar CEP</button>
+                    </div>
+                    <div id="endereco-info" class="endereco-info">
+                        <div class="form-group">
+                            <label for="logradouro">Logradouro:</label>
+                            <input type="text" id="logradouro" name="logradouro" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="bairro">Bairro:</label>
+                            <input type="text" id="bairro" name="bairro" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="cidade">Cidade:</label>
+                            <input type="text" id="cidade" name="cidade" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="estado">Estado:</label>
+                            <input type="text" id="estado" name="estado" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem:</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Sua mensagem aqui..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Enviar Mensagem</button>
+                </form>
+            </div>
         </section>
     </main>
     <footer id="contact">
